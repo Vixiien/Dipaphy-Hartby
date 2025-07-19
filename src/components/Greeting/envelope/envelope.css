@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&family=Style+Script&display=swap');
+
+/* Fix typo: relatie → relative */
+.envelope {
+  position: relative;
+  min-height: 180px;
+  height: auto;
+  width: 100%;
+  max-width: 280px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background: #00334c;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transform-style: preserve-3d;
+  perspective: 700px;
+  cursor: pointer;
+  overflow: visible;
+  margin: 0 auto;
+}
+
+/* Envelope flap triangle */
+.front-flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 0;
+  width: 0;
+  z-index: 3;
+}
+
+/* Top triangle flap */
+.flap {
+  border-left: 140px solid transparent;
+  border-right: 140px solid transparent;
+  border-top: 90px solid #006da3;
+  transform-origin: top;
+  transition: transform 1s ease;
+}
+
+/* Bottom triangle pocket */
+.pocket {
+  border-left: 140px solid #0077b2;
+  border-right: 140px solid #0077b2;
+  border-bottom: 90px solid #0689ca;
+  border-top: 90px solid transparent;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+/* Letter inside the envelope */
+.letter {
+  position: absolute;
+  top: 5%;
+  left: 2.5%;
+  right: 2.5%;
+  background: #fdfaf4;
+  background-image: 
+    linear-gradient(rgba(255,255,255,0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.3) 1px, transparent 1px);
+  background-size: 20px 20px;
+  height: 95%;
+  width: 95%;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  transition: top 1s ease, opacity 0.5s ease;
+  display: block;
+  padding: 12px;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 4;
+  overflow-y: auto;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  font-family: 'Oleo Script', cursive;
+  font-size: 16px;
+  font-weight: 100;
+}
+
+/* Subtle shine overlay */
+.letter::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0.2) 60%, rgba(255, 255, 255, 0.3) 100%);
+  border-radius: 6px;
+}
+
+/* Open animation */
+.envelope.open .flap {
+  transform: rotateX(180deg);
+}
+
+.envelope.open .letter {
+  top: 3%;
+  opacity: 1;
+  pointer-events: auto;
+  max-height: 220px;
+}
+
+/* 📱 Mobile Optimizations Without Breaking Layout */
+@media (max-width: 400px) {
+  .envelope {
+    max-width: 240px;
+  }
+
+  .flap {
+    border-left: 120px solid transparent;
+    border-right: 120px solid transparent;
+    border-top: 100px solid #006da3;
+  }
+
+  .pocket {
+    border-left: 120px solid #0077b2;
+    border-right: 120px solid #0077b2;
+    border-bottom: 90px solid #0689ca;
+    border-top: 100px solid transparent;
+  }
+
+  .letter {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
