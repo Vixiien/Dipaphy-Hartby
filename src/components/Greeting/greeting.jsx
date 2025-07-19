@@ -72,11 +72,19 @@ const GreetingStepper = () => {
             <p className='text-center'>Click the envelope to open👉👈</p>
           </Step>
 
-          <Step>
-            <div>
-            <img src="/icons/happy.gif" alt="🙇"style={{ width: '300px', height: '110px', margin: '0 auto'}} />
-              <p>Thank you for reading my message. I hope you like it.</p>
-              <p className='text-center'>Happy 18th birthday! 💙</p>
+         <Step>
+            <div className="flex flex-col items-center text-center px-4">
+              <img
+                src="/icons/happy.gif"
+                alt="🙇"
+                style={{ width: '300px', height: '110px', margin: '0 auto' }}
+              />
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl mt-2">
+                Thank you for reading my message. I hope you like it.
+              </p>
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl mt-1">
+                Happy 18th birthday! 💙
+              </p>
             </div>
           </Step>
         </Stepper>
