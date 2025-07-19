@@ -127,3 +127,27 @@
     padding: 10px;
   }
 }
+/* 📱 Ultra-Small Devices (~200px width) */
+@media (max-width: 300px) {
+  .envelope {
+    max-width: 160px;
+  }
+
+  .flap {
+    border-left: 80px solid transparent;
+    border-right: 65px solid transparent;
+    border-top: 116px solid #006da3;
+  }
+
+  .pocket {
+    border-left: 80px solid #0077b2;
+    border-right: 65px solid #0077b2;
+    border-bottom: 116px solid #0689ca;
+    border-top: 65px solid transparent;
+  }
+
+  .letter {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
