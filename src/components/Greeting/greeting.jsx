@@ -58,7 +58,7 @@ const GreetingStepper = () => {
         >
           <Step>
             <div className="text-center">
-              <img src="./components/icons/hi.gif" alt="Hello" style={{ width: '120px', height: '110px', margin: '0 auto'}} />
+              <img src="./src/components/icons/hi.gif" alt="Hi" style={{ width: '120px', height: '110px', margin: '0 auto'}} />
               <p className="-mt-1 rounded-lg">
                 Hello! This is what I needed to do, which is why I left your debut party early HAHA.
                 So please click the next button and enjoy the rest!
