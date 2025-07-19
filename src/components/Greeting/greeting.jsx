@@ -58,7 +58,7 @@ const GreetingStepper = () => {
         >
           <Step>
             <div className="text-center">
-              <img src="./src/components/icons/hi.gif" alt="Hi" style={{ width: '120px', height: '110px', margin: '0 auto'}} />
+              <img src="/icons/hi.gif" alt="Hello" style={{ width: '120px', height: '110px', margin: '0 auto'}} />
               <p className="-mt-1 rounded-lg">
                 Hello! This is what I needed to do, which is why I left your debut party early HAHA.
                 So please click the next button and enjoy the rest!
@@ -68,13 +68,13 @@ const GreetingStepper = () => {
 
           <Step>
             < Envelope/>
-            <img src="./src/components/icons/up.gif" alt="☝🏽"style={{ width: '120px', height: '110px', margin: '0 auto'}} />
+            <img src="/icons/up.gif" alt="☝🏽"style={{ width: '120px', height: '110px', margin: '0 auto'}} />
             <p className='text-center'>Click the envelope to open👉👈</p>
           </Step>
 
           <Step>
             <div>
-            <img src="./src/components/icons/happy.gif" alt="🙇"style={{ width: '300px', height: '110px', margin: '0 auto'}} />
+            <img src="/icons/happy.gif" alt="🙇"style={{ width: '300px', height: '110px', margin: '0 auto'}} />
               <p>Thank you for reading my message. I hope you like it.</p>
               <p className='text-center'>Happy 18th birthday! 💙</p>
             </div>
